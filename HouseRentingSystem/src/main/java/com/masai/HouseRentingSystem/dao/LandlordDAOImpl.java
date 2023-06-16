@@ -8,7 +8,6 @@ import com.masai.HouseRentingSystem.entity.Landlord;
 import com.masai.HouseRentingSystem.entity.LoggedInUserId;
 import com.masai.HouseRentingSystem.exception.SomethingWentWrongException;
 import com.masai.HouseRentingSystem.utility.EMUtils;
-import com.masai.exception.SomeThingWentWrongException;
 
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.EntityTransaction;
@@ -44,7 +43,7 @@ public class LandlordDAOImpl implements LandlordDAO{
 	}
 	
 	@Override
-	public void login(String username, String password) throws SomeThingWentWrongException{
+	public void login(String username, String password) throws SomethingWentWrongException{
 		EntityManager em = null;
 		try {
 			em = EMUtils.getEntityManager();
