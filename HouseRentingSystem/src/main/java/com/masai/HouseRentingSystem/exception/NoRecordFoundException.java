@@ -1,5 +1,9 @@
 package com.masai.HouseRentingSystem.exception;
 
-public class NoRecordFoundException {
 
+
+public class NoRecordFoundException extends Exception {
+	public NoRecordFoundException(String message) {
+		super(message);
+	}
 }
